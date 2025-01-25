@@ -13,4 +13,8 @@
     - name: Fruits
       ansible.builtin.debug:
         msg: fruits
-      when: type == "fruits"  
+      when: type == "fruits" 
+    - name: DryFruits
+      ansible.builtin.debug:
+        msg: dryfruits
+      when: type == "dryfruits"
