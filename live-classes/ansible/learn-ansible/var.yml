@@ -9,6 +9,7 @@
   hosts: localhost
   vars:
     URL_PLAY: play.example.com
+    URL_CUSTOM: cm9.azentio.com
   tasks:
     - name: Print variable
       ansible.builtin.debug:
@@ -27,8 +28,8 @@
     - name: Task variable
       ansible.builtin.debug:
         msg: "{{ URL_CUSTOM }}"
-      vars:
-        URL_CUSTOM: az.azentio.com    
+    #  vars:
+    #    URL_CUSTOM: az.azentio.com    
 
     # Store result of a task, to OUTPUT variable
     - name: demo
