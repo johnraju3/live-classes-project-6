@@ -1,7 +1,8 @@
 #if/else
 
 #when
-
+---
+  hosts: all
 - name: Demo on Conditions
   hosts: localhost
   tasks:
