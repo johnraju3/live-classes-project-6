@@ -14,7 +14,7 @@
         enabled: yes   
 
     - name: Set MySQL password
-      community.mysql.mysql_user:
+      community.mysql.mysql:
         name: root
         host: 172.31.20.108
         password: ExpenseApp@1
