@@ -2,6 +2,11 @@
   hosts: all
   become: yes
   tasks:
+    - name: UnInstall Nginx
+      ansible.builtin.dnf:
+        name: nginx
+        state: absent
+        
     - name: Install Nginx
       ansible.builtin.dnf:
         name: nginx
