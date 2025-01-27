@@ -1,5 +1,5 @@
 [mysql]
-ec2-54-224-228-88.compute-1.amazonaws.com
+ec2-54-175-210-212.compute-1.amazonaws.com
 
 [mysql:vars]
 ansible_user=ec2-user
