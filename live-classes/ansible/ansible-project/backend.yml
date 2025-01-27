@@ -15,7 +15,7 @@
         name: nodejs
         state: installed
 
-    - name: Install unzip
+    - name: Install unzip and tar
       ansible.buildin.dnf:
         name: 
           - unzip
