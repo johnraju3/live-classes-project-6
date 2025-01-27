@@ -71,8 +71,8 @@
         executable: /usr/local/bin/pip3.9      
 
     - name: Load Schema
-      ansible.builtin.command:
-        cmd: mysql -u root -p 'ExpenseApp@1' -h 172.31.20.108 < /app/schema/backend.sql
+      ansible.builtin.shell:
+        cmd: mysql -u root -p'ExpenseApp@1' -h 172.31.20.108 < /app/schema/backend.sql
         #state: import 
         #name: all
         #target: /app/schema/backend.sql
