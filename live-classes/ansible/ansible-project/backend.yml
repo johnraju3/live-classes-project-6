@@ -72,7 +72,7 @@
 
     - name: Load Schema
       ansible.builtin.shell:
-        cmd: mysql -u root -p'ExpenseApp@1' -h 172.31.20.108 < /app/schema/backend.sql
+        cmd: mysql -u root -p'ExpenseApp@1' -h 172.31.24.81 < /app/schema/backend.sql
         #state: import 
         #name: all
         #target: /app/schema/backend.sql
