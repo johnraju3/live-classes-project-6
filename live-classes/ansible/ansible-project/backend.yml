@@ -70,9 +70,9 @@
           - cryptography
         executable: /usr/local/bin/pip3.9      
 
-    - name: Set MySQL grant
-      ansible.builtin.command: >
-        mysql -u root -p'ExpenseApp@1' -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'ExpenseApp@1' WITH GRANT OPTION; FLUSH PRIVILEGES;"
+    #- name: Set MySQL grant
+    #  ansible.builtin.command: >
+    #    mysql -u root -p'ExpenseApp@1' -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'ExpenseApp@1' WITH GRANT OPTION; FLUSH PRIVILEGES;"
       
       
     - name: Load Schema
