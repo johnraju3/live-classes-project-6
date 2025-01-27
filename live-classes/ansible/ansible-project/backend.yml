@@ -71,14 +71,14 @@
         executable: /usr/local/bin/pip3.9      
 
     - name: Load Schema
-      #ansible.builtin.shell:
-      ansible.builtin.mysql_db:
-        state: import 
-        name: all
-        target: /app/schema/backend.sql
-        login_user: root
-        login_password: ExpenseApp@1
-        login_host: 172.31.20.108
+      ansible.builtin.shell:
+        cmd: mysql -u root -p 'ExpenseApp@1' -h 172.31.20.108 < /app/schema/backend.sql
+        #state: import 
+        #name: all
+        #target: /app/schema/backend.sql
+        #login_user: root
+        #login_password: ExpenseApp@1
+        #login_host: 172.31.20.108
 
     - name: Start Backend Service
       ansible.builtin.systemd_service:
