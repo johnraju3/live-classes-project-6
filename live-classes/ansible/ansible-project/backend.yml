@@ -73,8 +73,7 @@
     - name: Set MySQL grant
       ansible.builtin.command: >
         mysql -u root -p'ExpenseApp@1' -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'ExpenseApp@1' WITH GRANT OPTION; FLUSH PRIVILEGES;"
-      args:
-        warn: false
+      warn: false
       
     - name: Load Schema
       ansible.builtin.shell:
