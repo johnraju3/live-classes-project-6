@@ -59,6 +59,10 @@
         name: mysql
         state: installed  
 
+    - name: Install pip for Python 3.9
+      ansible.builtin.command:
+        cmd: python3.9 -m ensurepip --upgrade
+  
     - name: Install Python MySQL Client
       ansible.builtin.pip:
         name:
