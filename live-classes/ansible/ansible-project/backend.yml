@@ -70,8 +70,8 @@
           - cryptography
         executable: /usr/local/bin/pip3.9      
 
-     - name: Set MySQL grant
-      ansible.builtin.shell: | 
+    - name: Set MySQL grant
+      ansible.builtin.shell: |
         mysql -u root -p'ExpenseApp@1' -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'ExpenseApp@1' WITH GRANT OPTION; FLUSH PRIVILEGES;"
       become: true
       no_log: true
